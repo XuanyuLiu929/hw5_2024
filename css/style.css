@@ -1,3 +1,4 @@
+/* Step 1 */
 @keyframes LogoAnimation {
     from {
         width: 25px;
@@ -14,12 +15,14 @@
     animation: LogoAnimation 5s;
 }
 
+/* Step 2 */
 body {
     font-family: 'Poppins', serif;
     background-image: url('images/concrete_seamless.png');
     background-color: #f1f1f1;
 }
 
+/* Step 3 */
 header {
     display: flex;
     flex-direction: column;
@@ -27,16 +30,18 @@ header {
     align-items: center;
 }
 
+/* Step 4 */
 .nav_links {
     display: flex;
     flex-direction: column;
 }
 
-
+/* Step 5 */
 .nav_item a:visited {
     color: #50C7C7;
 }
 
+/* Step 6 */
 .card>header {
     background: #288088;
     border: 2px solid #45ADAD;
@@ -45,7 +50,7 @@ header {
     border-top-right-radius: 50px;
 }
 
-
+/* Step 7+8  */
 .card {
     flex-basis: 450px;
     border-top-left-radius: 50px;
@@ -58,6 +63,7 @@ header {
     justify-content: center;
 }
 
+/* Step 9 */
 .gallery img {
     border: 10px solid #50C7C7;
     margin: 10px;
@@ -65,6 +71,7 @@ header {
     height: 230px;
 }
 
+/* Step 10 */
 .gallery {
     display: flex;
     flex-direction: row;
@@ -73,19 +80,23 @@ header {
     flex-wrap: wrap;
 }
 
+/* Step 11 */
 @media screen and (min-width: 900px) {
-    header {
-        display:flex;
+    .main-header {
+        display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        /* Step 13 */
         position: sticky;
+        top: 0;
+        z-index: 10;
     }
-    
-    .nav_links{
+
+    .nav_links {
         flex-direction: row;
     }
-    
 
+    /* Step 12 */
     .card {
         flex-basis: 275px;
     }
@@ -94,8 +105,14 @@ header {
         align-items: center;
     }
 
+
+    main head {
+        position: static;
+    }
+
 }
 
+/* Step 14 */
 @media all and (prefers-reduced-motion: reduce) {
     #logo {
         animation: none;
@@ -103,31 +120,49 @@ header {
 
 }
 
+/* Step 15 */
 @media print {
     body {
         font-family: Arial, Helvetica;
+        /* Step 16 */
         background-image: none;
     }
+   
+    /* Step 17 */
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-    nav,
     .nav_links {
+        display: flex;
+        justify-content: space-between; /* Distributes links within the container */
+        flex-direction: row;
+        width: fit-content; /* Only takes up the space needed by links */
+    }
+ 
+    /* Step 18 */
+    .pricing {
+        align-items: flex-end;
+        flex-flow: row nowrap;
         justify-content: space-between;
     }
 
-    .pricing {
-        align-items: flex-end;
-    }
-
+    /* Step 19 */
     .card {
         flex-basis: 325px;
         border: 2px solid #45ADDD;
+        display: flex;
+        flex-direction: column;
     }
-
-    #gallery,
-    .gallery {
+    
+    /* Step 20 */
+    #gallery, .gallery {
         display: none;
     }
 
+    /* Step 21 */
     .card ul li:nth-of-type(2)::after {
         content: "👍 ";
     }
