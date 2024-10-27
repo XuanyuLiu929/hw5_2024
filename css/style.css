@@ -38,7 +38,7 @@ header {
 
 /* Step 5 */
 .nav_item a:visited {
-    color: #50C7C7;
+    color: blue;
 }
 
 /* Step 6 */
@@ -127,21 +127,18 @@ header {
         /* Step 16 */
         background-image: none;
     }
-   
+
     /* Step 17 */
     nav {
         width: 100%;
-        display: flex;
-        justify-content: center;
     }
 
     .nav_links {
         display: flex;
-        justify-content: space-between; /* Distributes links within the container */
+        justify-content: space-evenly;
         flex-direction: row;
-        width: fit-content; /* Only takes up the space needed by links */
     }
- 
+
     /* Step 18 */
     .pricing {
         align-items: flex-end;
@@ -156,9 +153,10 @@ header {
         display: flex;
         flex-direction: column;
     }
-    
+
     /* Step 20 */
-    #gallery, .gallery {
+    #gallery,
+    .gallery {
         display: none;
     }
 
